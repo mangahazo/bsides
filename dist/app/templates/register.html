@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            border: 10px dashed black;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            display: flex;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin: auto;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0 10px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: black;
+            color: white;
+            padding: 14px 14px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        h3 {
+            background-color: black;
+            color: white;
+            padding: 14px 14px;
+            border: none;
+            width: 100%;
+            opacity: 0.9;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0;
+        }
+        p {
+            font-size: 0.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>REGISTER</h3>
+        <p>{% if error %}{{error}}{% else %}Make sure you login first :){% endif %}</p>
+        <form method="post">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <input type="submit" value="Register">
+        </form>
+        <div style="text-align: right; font-size: 0.8em; margin-top: 10px">
+            <a href="/login" style="color: black;">Login</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            border: 10px dashed black;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            display: flex;
+        }
+
+        .container {
+            width: 600px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin: auto;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0 10px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            background-color: black;
+            color: white;
+            padding: 14px 14px;
+            border: none;
+            width: 100%;
+            opacity: 0.9;
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 0.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #create {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 0.8em;
+            border: none;
+            font-family: inherit;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>CREATE WEBSITE</h3>
+        <form method="post">
+            <textarea rows="10" name="content">Your website content goes here.</textarea>
+            <div style="text-align: right;">
+                <button type="submit" id="create" href="/create_website">CREATE</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

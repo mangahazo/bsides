@@ -1,0 +1,16 @@
+eyJ1c2VybmFtZSI6InRlc3QifQ.8wk0FtlecU1AT5IztzLEK3y4ujvqUKrB0WCSluYc3rA
+eyJ1c2VybmFtZSI6ImFkbWluIn0.8wk0FtlecU1AT5IztzLEK3y4ujvqUKrB0WCSluYc3rA
+
+eyJ1c2VybmFtZSI6InRlc3QifQ.8wk0FtlecU1AT5IztzLEK3y4ujvqUKrB0WCSluYc3rA
+
+for i in {1..255}; do (ping -c 1 192.168.0.${i} | grep "bytes from" > active.txt); done 2>/dev/null
+
+nmap -T4 -sn 192.168.0.0/24
+nmap -Pn -T4 -F 192.168.0.144
+nc -nv 192.168.0.144 5000
+nmap -Pn -T4 -sV -p5000 192.168.0.144
+nmap -Pn -T4 -p- -v 192.168.0.144
+
+ssh -p 7001 ctf-e9d70d8ac240@ssh.dyn.mctf.io -L 5000:192.168.0.144:5000
+
+nc -n
